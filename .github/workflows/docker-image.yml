@@ -17,5 +17,5 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag neetu124/sampleapp:latest
     - name: push the docker image
-      run: docker login -u neetu124 -p{{secrets.DOCKER_TOKEN}}&&  docker push neetu124/docker-sampleapp-autobuild:latest
+      run: docker login -u neetu124 -p{{secrets.DOCKER_TOKEN}} && docker push neetu124/sampleapp-autobuild:latest
       
