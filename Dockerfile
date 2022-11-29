@@ -1,4 +1,4 @@
 FROM openjdk:8
-ADD build/wrapper/*.jar helloworld.jar
+ADD build/*.jar helloworld.jar
 EXPOSE 8080
 ENTRYPOINT [ "java", "-jar", "helloworld.jar"]
