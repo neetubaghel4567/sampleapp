@@ -1,4 +1,4 @@
 FROM java:8
-ADD build/libs/*.jar dockerapp.jar
+ADD build/gradle/wrapper/*.jar helloworld.jar
 EXPOSE 8080
-ENTRYPOINT["java","-jar","dockerapp.jar"]
+ENTRYPOINT["java","-jar","helloworld.jar"]
