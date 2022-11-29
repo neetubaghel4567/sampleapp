@@ -1,5 +1,4 @@
-FROM openjdk:8
-EXPOSE 8080:8080
-WORKDIR /usr/local/bin
-COPY ./build helloworld
-ENTRYPOINT [ "java", "helloworld"]
+FROM java:8
+ADD build/libs/*.jar dockerapp.jar
+EXPOSE 8080
+ENTRYPONT["java","-jar","dockerapp.jar"]
